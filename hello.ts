@@ -1,5 +1,5 @@
-type Fun = (...args: any[]) => any;
-function doExpr<T extends Fun>(fn: T): ReturnType<T> {
+
+function doExpr<T>(fn: () => T): T {
     return fn();
 }
 
